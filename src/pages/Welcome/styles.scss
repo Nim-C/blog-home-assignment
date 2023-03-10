@@ -1,0 +1,37 @@
+#welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & .view-messages-button {
+    display: inline-block;
+    margin-top: 1rem;
+    border: 1px solid white;
+    padding: 1.4rem;
+    border-radius: 1rem;
+    color: white;
+    font-size: 2.5rem;
+    text-decoration: none;
+  }
+
+  h1 {
+    font-size: clamp(5em, 10vw, 10rem);
+  }
+
+  p {
+    font-size: 3rem;
+    font-size: clamp(2.5em, 6vw, 4rem);
+
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  strong {
+    &.unread {
+      color: var(--persian-pink);
+    }
+    &.read {
+      color: var(--maximum-blue);
+    }
+  }
+}

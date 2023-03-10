@@ -1,0 +1,48 @@
+:root {
+  --eerie-black: #242424ff;
+
+  --air-superiority-blue: #6ea4bfff;
+  --maximum-blue: #5eb1bfff;
+  --light-steel-blue: #b4c5e4ff;
+
+  --french-violet: #6f2dbdff;
+  --medium-purple: #907ad6ff;
+
+  --lemon-meringue: #eee5bfff;
+
+  --tea-green: #e8f8c1ff;
+  --tea-green-2: #d1ffc6ff;
+
+  --baby-pink: #e5c2c0ff;
+  --persian-pink: #ff8cc6ff;
+
+  --chestnut: #98473eff;
+
+  font-family: Poppins, sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--eerie-black);
+}
+
+h1 {
+  margin: 0;
+  font-size: 8em;
+  line-height: 1.1;
+}
+
+a {
+  text-decoration: none;
+}
