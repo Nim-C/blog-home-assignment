@@ -12,7 +12,19 @@
   scale: 1;
 
   &.selected {
+    transition: scale 0.3s ease-in-out;
     cursor: not-allowed;
     scale: 1.6;
+  }
+
+  animation: enter 2s ease-in-out;
+
+  @keyframes enter {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }

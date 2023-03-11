@@ -28,6 +28,31 @@ header {
       &:hover {
         color: var(--light-steel-blue);
       }
+
+      &:first-of-type {
+        animation: nav-link-enter 1s ease-in-out;
+      }
+      &:last-of-type {
+        animation: nav-link-enter 2s ease-in-out;
+      }
+    }
+  }
+
+  @keyframes nav-link-enter {
+    0% {
+      transform: translateY(-200%);
+    }
+    25% {
+      transform: translateY(50%);
+    }
+    50% {
+      transform: translateY(-25%);
+    }
+    75% {
+      transform: translateY(15%);
+    }
+    100% {
+      transform: translateY(0);
     }
   }
 }
