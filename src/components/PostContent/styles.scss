@@ -1,4 +1,5 @@
 #post-content {
+  position: relative;
   margin-top: 40px;
 
   display: flex;
@@ -17,5 +18,26 @@
 
   p {
     font-size: 1.5rem;
+  }
+}
+
+#button-back-to-blog {
+  box-sizing: border-box;
+  padding: 0.1em 0.2em;
+  width: 20rem;
+
+  font-size: 2rem;
+  text-align: center;
+  color: var(--lemon-meringue);
+  background-color: transparent;
+  border-radius: 2em;
+
+  transition: width 0.2s ease-in;
+}
+
+@media screen and (max-width: 480px) {
+  #button-back-to-blog {
+    width: 100%;
+    background-color: var(--chestnut);
   }
 }
