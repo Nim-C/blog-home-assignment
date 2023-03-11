@@ -1,38 +1,34 @@
 import { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import 'src/i18n';
 
-// import { Language } from 'src/types/index';
-// import { LanguageContext } from 'src/context/languageContext';
+import { Language } from './types';
 
 import RootRouter from './components/RootRouter';
 import Header from './components/Header';
 
+const LANGUAGE_TO_CONTENT_DIERCTION_MAP: Record<Language, 'rtl' | 'ltr'> = {
+  en: 'ltr',
+  he: 'rtl',
+};
+
 function App() {
-  // const [language, setLanguage] = useState<Language>('en');
-  const mounted = useRef<boolean>(false);
+  const { i18n } = useTranslation();
+  const languageSelected = i18n.resolvedLanguage as Language;
 
-  // const languageContextValue = useMemo(
-  //   () => ({ currrentLanguage: language, chooseLanguage: setLanguage }),
-  //   [language]
-  // );
-
-  useEffect(() => {
-    if (mounted.current) {
-      // console.log('');
-    }
-    mounted.current = true;
-  }, []);
+  document.body.setAttribute(
+    'dir',
+    LANGUAGE_TO_CONTENT_DIERCTION_MAP[languageSelected]
+  );
 
   return (
-    // <LanguageContext.Provider value={languageContextValue}>
     <>
       <Header />
       <main>
         <RootRouter />
       </main>
     </>
-    // </LanguageContext.Provider>
   );
 }
 

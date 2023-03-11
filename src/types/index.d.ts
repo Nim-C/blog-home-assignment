@@ -2,7 +2,13 @@ export type Nullable<T> = T | null;
 
 export type Language = 'en' | 'he';
 
-export type LanguageContextType = {
-  currrentLanguage: Language;
-  chooseLanguage: (chosenLanguage: Language) => void;
+type Paragraph = {
+  paragraphTitle?: string;
+  paragraphText: string;
+};
+
+export type Post = {
+  mainTitle: string;
+  summary: string;
+  content: Paragraph[];
 };
