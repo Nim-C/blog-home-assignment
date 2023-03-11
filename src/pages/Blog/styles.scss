@@ -5,6 +5,12 @@
   gap: 5rem;
 
   .blog-post-link {
+    color: var(--tea-green);
+
+    &:hover {
+      color: var(--baby-pink);
+    }
+
     width: 33%;
 
     h4 {

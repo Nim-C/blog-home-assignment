@@ -8,7 +8,7 @@ const Home: FC = () => {
 
   return (
     <div id="welcome-container">
-      <h1>{translate('welcomePeople')}</h1>
+      <h1>{translate('homePageText')}</h1>
     </div>
   );
 };
