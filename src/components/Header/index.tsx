@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import LanguageSelectorButton from 'src/i18n/LanguageSelectorButton';
+import LanguageSelectorButton from 'src/components/LanguageSelectorButton';
 
 import './styles.scss';
 

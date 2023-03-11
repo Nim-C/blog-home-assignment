@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
 import { Language } from 'src/types';
-import { ReactComponent as GbFlag } from 'src/assets/gb-flag.svg';
-import { ReactComponent as IlFlag } from 'src/assets/Il-flag.svg';
+import { ReactComponent as GbFlag } from 'src/assets/flags/gb-flag.svg';
+import { ReactComponent as IlFlag } from 'src/assets/flags/Il-flag.svg';
 
 import './styles.scss';
 import { useTranslation } from 'react-i18next';
