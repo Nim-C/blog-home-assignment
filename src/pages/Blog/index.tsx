@@ -1,14 +1,26 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import postList from 'src/assets/blogs/posts-list.json';
 
-const Blog = () => (
-  <div>
-    {postList.map(({ id }) => (
-      <Link key={id} to={id}>
-        {id}
-      </Link>
-    ))}
-  </div>
-);
+import { PostsCollectionContext } from 'src/context/postsCollectionContext';
+import { PostsCollectionContextType } from 'src/types';
+
+import './styles.scss';
+
+const Blog = () => {
+  const { postCollection } = useContext(
+    PostsCollectionContext
+  ) as PostsCollectionContextType;
+
+  return (
+    <section id="blog-posts-links-container">
+      {Object.entries(postCollection).map(([key, value]) => (
+        <Link key={key} to={key} className="blog-post-link">
+          <h4>{value.mainTitle}</h4>
+          <p>{value.summary}</p>
+        </Link>
+      ))}
+    </section>
+  );
+};
 
 export default Blog;

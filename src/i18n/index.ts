@@ -13,7 +13,6 @@ export default i18next
       en: english,
       he: hebrew,
     },
-    lng: 'en',
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false, // turn off xss protection because react is already safes from xss
