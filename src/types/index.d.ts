@@ -1,5 +1,8 @@
 export type Nullable<T> = T | null;
 
-export interface IDataEntity {
-  id: string;
-}
+export type Language = 'en' | 'he';
+
+export type LanguageContextType = {
+  currrentLanguage: Language;
+  chooseLanguage: (chosenLanguage: Language) => void;
+};

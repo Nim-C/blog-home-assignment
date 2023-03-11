@@ -1,10 +1,21 @@
 import { useEffect, useRef } from 'react';
-import { Navigate, Route, Routes } from 'react-router-dom';
 
-import Welcome from 'src/pages/Welcome';
+import 'src/i18n';
+
+// import { Language } from 'src/types/index';
+// import { LanguageContext } from 'src/context/languageContext';
+
+import RootRouter from './components/RootRouter';
+import Header from './components/Header';
 
 function App() {
+  // const [language, setLanguage] = useState<Language>('en');
   const mounted = useRef<boolean>(false);
+
+  // const languageContextValue = useMemo(
+  //   () => ({ currrentLanguage: language, chooseLanguage: setLanguage }),
+  //   [language]
+  // );
 
   useEffect(() => {
     if (mounted.current) {
@@ -14,10 +25,14 @@ function App() {
   }, []);
 
   return (
-    <Routes>
-      <Route path="/" element={<Welcome />} />
-      <Route path="*" element={<Navigate to="/" />} />
-    </Routes>
+    // <LanguageContext.Provider value={languageContextValue}>
+    <>
+      <Header />
+      <main>
+        <RootRouter />
+      </main>
+    </>
+    // </LanguageContext.Provider>
   );
 }
 
